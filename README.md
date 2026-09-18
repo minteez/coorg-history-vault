@@ -9,6 +9,18 @@ Interactive Timeline
 <img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/70f8492c-38cb-4bff-ac0e-7bf309d52cd5" />
 'The Haleri Dynasty' page
 <img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/fc7fa6ff-41f8-4f4b-bd21-c7bc19307f9a" />
+'The Kodava People' page
+<img width="1585" height="900" alt="image" src="https://github.com/user-attachments/assets/2a64fd4a-093d-4bfa-88b4-59a2f31098af" />
+'Festivals' page
+<img width="1583" height="900" alt="image" src="https://github.com/user-attachments/assets/acdbfb13-f6f4-4d76-b8fb-870225f4cbd5" />
+'Kodava Takk' page
+<img width="1582" height="900" alt="image" src="https://github.com/user-attachments/assets/4cf28600-72c7-4b76-8184-27dc8608ac25" />
+Interactive Map
+<img width="1581" height="900" alt="image" src="https://github.com/user-attachments/assets/9110b159-c778-4027-8f57-8aa6f660b6e6" />
+Glossary page
+<img width="1584" height="900" alt="image" src="https://github.com/user-attachments/assets/0b7bf54c-920c-4712-bad9-4aa2e1d66fce" />
+About page
+<img width="1583" height="900" alt="image" src="https://github.com/user-attachments/assets/b1afb52b-731a-42a9-b4bf-531f46b1c757" />
 
 ### An Interactive Digital Archive of Kodagu's History, Culture, People & Language
 

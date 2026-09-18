@@ -1,5 +1,15 @@
 # The Complete History of Coorg
 
+## Gallery
+A few glimpses of 'The Complete History of Coorg'
+
+Home Page
+<img width="1585" height="900" alt="image" src="https://github.com/user-attachments/assets/7fa8a843-0010-44a7-aa76-b565a0a13514" />
+Interactive Timeline
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/70f8492c-38cb-4bff-ac0e-7bf309d52cd5" />
+'The Haleri Dynasty' page
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/fc7fa6ff-41f8-4f4b-bd21-c7bc19307f9a" />
+
 ### An Interactive Digital Archive of Kodagu's History, Culture, People & Language
 
 **The Complete History of Coorg** is an interactive historical and cultural archive dedicated to documenting and presenting the story of **Coorg (Kodagu), Karnataka, India**.

@@ -114,6 +114,14 @@ function MapPage() {
             </li>
           ))}
         </ul>
+        <div className="mt-8">
+          <Link
+            to="/timeline"
+            className="inline-flex items-center rounded-md border border-border px-3.5 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+          >
+            Back to timeline
+          </Link>
+        </div>
       </Section>
     </main>
   );

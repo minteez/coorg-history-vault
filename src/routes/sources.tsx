@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { sources } from "@/data/sources";
 
 export const Route = createFileRoute("/sources")({
@@ -23,6 +23,14 @@ export const Route = createFileRoute("/sources")({
 function SourcesPage() {
   return (
     <main id="main" className="mx-auto max-w-4xl px-5 py-14">
+      <div className="mb-6 flex flex-wrap items-center gap-3">
+        <Link
+          to="/"
+          className="inline-flex items-center rounded-md border border-border px-3 py-1.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+        >
+          Back to archive home
+        </Link>
+      </div>
       <p className="rule-eyebrow">Archive</p>
       <h1 className="mt-2 font-display text-4xl">Sources &amp; Bibliography</h1>
       <p className="mt-4 max-w-2xl text-muted-foreground">

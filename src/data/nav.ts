@@ -24,7 +24,7 @@ export const navGroups: { title: string; items: NavItem[] }[] = [
       { label: "Sacred Traditions", to: "/culture", blurb: "Ancestor veneration, Karana, kaimada" },
       { label: "Festivals", to: "/festivals", blurb: "Kailpodhud, Kaveri Sankramana, Puttari" },
       { label: "Agriculture", to: "/agriculture", blurb: "Paddy, coffee, pepper, cardamom" },
-      { label: "Military Heritage", to: "/military", blurb: "Cariappa, Thimayya and service" },
+      { label: "Military Heritage", to: "/figures", blurb: "Cariappa, Thimayya and service" },
     ],
   },
   {
@@ -32,7 +32,7 @@ export const navGroups: { title: string; items: NavItem[] }[] = [
     items: [
       { label: "Kodava Takk", to: "/language", blurb: "ಕೊಡವ ತಕ್ಕ್ — classification to today" },
       { label: "Pattole Palame", to: "/pattole-palame", blurb: "The silken lore, 1924" },
-      { label: "Kodava Literature", to: "/literature", blurb: "Appacha Kavi and after" },
+      { label: "Kodava Literature", to: "/language", blurb: "Appacha Kavi and after" },
     ],
   },
   {
@@ -40,8 +40,8 @@ export const navGroups: { title: string; items: NavItem[] }[] = [
     items: [
       { label: "Interactive Map", to: "/map", blurb: "Layered historical atlas" },
       { label: "Historical Figures", to: "/figures", blurb: "Searchable person database" },
-      { label: "Places in History", to: "/places", blurb: "Forts, temples, settlements" },
-      { label: "Cultural Gallery", to: "/gallery", blurb: "Images with credits and licences" },
+      { label: "Places in History", to: "/map", blurb: "Forts, temples, settlements" },
+      { label: "Image Credits", to: "/sources", blurb: "Source list and cited material" },
       { label: "Glossary", to: "/glossary", blurb: "Terms explained" },
       { label: "Myth, Tradition or History?", to: "/evidence", blurb: "How this archive weighs evidence" },
       { label: "Sources & Bibliography", to: "/sources", blurb: "Everything cited" },

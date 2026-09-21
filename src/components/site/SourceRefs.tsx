@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 export function SourceRefs({
   ids,
   className,
-  label = "Sources",
+  label = "Sources & Further Reading",
 }: {
   ids: string[];
   className?: string;

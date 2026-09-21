@@ -3,20 +3,19 @@ import { Instagram, Youtube, Globe, Mountain } from "lucide-react";
 
 const explore = [
   { label: "Timeline", to: "/timeline" },
-  { label: "Map", to: "/map" },
+  { label: "Historical Atlas", to: "/map" },
   { label: "Culture", to: "/culture" },
   { label: "Kodava Language", to: "/language" },
-  { label: "People", to: "/figures" },
-  { label: "Places", to: "/places" },
-  { label: "Gallery", to: "/gallery" },
+  { label: "Historical Figures", to: "/figures" },
+  { label: "Glossary", to: "/glossary" },
   { label: "Sources", to: "/sources" },
 ];
 
 const project = [
   { label: "About", to: "/about" },
   { label: "Developer", to: "/about", hash: "developer" },
+  { label: "Evidence Guide", to: "/evidence" },
   { label: "Sources", to: "/sources" },
-  { label: "Image Credits", to: "/gallery", hash: "credits" },
 ];
 
 const socials = [
@@ -24,6 +23,8 @@ const socials = [
   { label: "YouTube", href: "https://www.youtube.com/@thecubermint", icon: Youtube },
   { label: "Portfolio", href: "https://minteez.lovable.app", icon: Globe },
 ];
+
+const siteVersion = "1.0.0";
 
 export function SiteFooter() {
   return (
@@ -48,7 +49,10 @@ export function SiteFooter() {
           <ul className="mt-4 space-y-2 text-sm">
             {explore.map((item) => (
               <li key={item.label}>
-                <Link to={item.to} className="text-parchment/75 underline-offset-4 hover:text-accent hover:underline">
+                <Link
+                  to={item.to}
+                  className="text-parchment/75 underline-offset-4 transition-colors hover:text-accent hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
+                >
                   {item.label}
                 </Link>
               </li>
@@ -64,7 +68,7 @@ export function SiteFooter() {
                 <Link
                   to={item.to}
                   {...(item.hash ? { hash: item.hash } : {})}
-                  className="text-parchment/75 underline-offset-4 hover:text-accent hover:underline"
+                  className="text-parchment/75 underline-offset-4 transition-colors hover:text-accent hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
                 >
                   {item.label}
                 </Link>
@@ -101,7 +105,7 @@ export function SiteFooter() {
         <div className="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-6 text-xs text-parchment/60 sm:flex-row sm:items-center sm:justify-between">
           <p>Copyright © 2026 Minteez. All Rights Reserved.</p>
           <p>Designed and engineered by Minteez with Lovable.</p>
-          <p>Version 1.0 • Build 2026</p>
+          <p>Version {siteVersion} • Build 2026</p>
         </div>
       </div>
     </footer>

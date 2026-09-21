@@ -104,6 +104,47 @@ function AboutPage() {
         </ul>
       </Section>
 
+      <Section title="Coorg in the CBSE Classroom">
+        <div className="prose-archive max-w-2xl space-y-4 text-muted-foreground">
+          <p>
+            For many students in the CBSE Class 10 English Language &amp; Literature course, the chapter
+            “Coorg,” written by Lokesh Abrol in First Flight, was part of the syllabus for the 2007–2026
+            batches. It was one of those chapters that made school reading feel a little more personal
+            when a student happened to come from the place being described.
+          </p>
+          <p>
+            Since Minteez is from Coorg, classmates were often surprised to learn that he came from the
+            same place they were reading about in class. That surprise quickly turned into a steady stream
+            of questions about Kodava culture, lifestyle, food, traditions and everyday life. A recurring
+            joke was whether he personally owned a firearm because of the well-known historical and legal
+            tradition associated with Kodavas carrying firearms without a licence. Some classmates even
+            jokingly asked him to “buy them a gun” because he was from Coorg — a humorous classroom
+            anecdote, not a serious suggestion or encouragement.
+          </p>
+          <p>
+            When the chapter was taught, the English teacher would introduce it by jokingly saying, “Coorg
+            is the place of Minteez,” and would tell students they could approach Minteez if they had doubts
+            about Coorg instead of asking the teacher. That kind of classroom humour, curiosity and friendly
+            confusion became part of the experience itself.
+          </p>
+          <p>
+            Those moments helped inspire The Complete History of Coorg. What started as a personal connection
+            to a chapter in a textbook became a larger effort to turn classroom curiosity into a comprehensive
+            digital resource covering Kodagu&apos;s history, culture, people, language, places and heritage.
+            It is a project shaped by memory as much as research: by a student who lived the story, by the
+            questions classmates asked, and by the feeling that a place as rich as Coorg deserved more than a
+            brief chapter summary.
+          </p>
+          <p>
+            This story feels especially meaningful because the CBSE Class 10 English curriculum is changing
+            from the 2026–27 academic session, which means future batches will not necessarily encounter the
+            same “Coorg” chapter in the same way. In that sense, this project also preserves a small piece of
+            that shared classroom experience — a reminder that a textbook chapter can become part of a lived,
+            nostalgic memory for an entire generation.
+          </p>
+        </div>
+      </Section>
+
       <Section title="Using this archive">
         <div className="flex flex-wrap gap-3">
           <Link

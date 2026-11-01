@@ -1,5 +1,5 @@
 import { lazy, Suspense, useMemo, useState } from "react";
-import { ClientOnly, createFileRoute } from "@tanstack/react-router";
+import { ClientOnly, createFileRoute, Link } from "@tanstack/react-router";
 import { PageHeader, Section } from "@/components/site/Prose";
 import { EvidenceBadge } from "@/components/site/EvidenceBadge";
 import { SourceRefs } from "@/components/site/SourceRefs";

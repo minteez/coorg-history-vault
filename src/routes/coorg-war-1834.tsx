@@ -83,7 +83,7 @@ function WarPage() {
       </Section>
 
       <Section eyebrow="Chronology" title="1834, 1837 and after">
-        <EraEvents tag="coorg-war" />
+        <EraEvents eventId="coorg-war" />
         <div className="mt-10">
           <EraEvents tag="rebellion" />
         </div>

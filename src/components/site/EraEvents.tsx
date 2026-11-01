@@ -1,11 +1,10 @@
 import { EvidenceBadge } from "./EvidenceBadge";
 import { SourceRefs } from "./SourceRefs";
 import { timelineSorted, type Era } from "@/data/timeline";
+import { filterTimeline } from "@/lib/timeline-filter";
 
-export function EraEvents({ era, tag }: { era?: Era; tag?: string }) {
-  const events = timelineSorted.filter(
-    (e) => (era ? e.era === era : true) && (tag ? e.tags.includes(tag) : true),
-  );
+export function EraEvents(filters: { era?: Era; tag?: string; eventId?: string }) {
+  const events = filterTimeline(timelineSorted, filters);
   if (events.length === 0) return null;
 
   return (

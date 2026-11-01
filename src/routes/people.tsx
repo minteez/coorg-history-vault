@@ -6,6 +6,8 @@ import { SourceRefs } from "@/components/site/SourceRefs";
 export const Route = createFileRoute("/people")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "article" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "The Kodava People — Coorg History Archive" },
       {
         name: "description",

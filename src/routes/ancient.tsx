@@ -7,6 +7,8 @@ import { SourceRefs } from "@/components/site/SourceRefs";
 export const Route = createFileRoute("/ancient")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "article" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "Prehistoric & Ancient Kodagu — Coorg History Archive" },
       {
         name: "description",

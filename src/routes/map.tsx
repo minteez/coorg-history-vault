@@ -11,6 +11,8 @@ const MapView = lazy(() => import("@/components/site/MapView"));
 export const Route = createFileRoute("/map")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "Historical Atlas of Kodagu — Coorg History Archive" },
       {
         name: "description",

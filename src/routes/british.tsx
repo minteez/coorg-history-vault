@@ -7,6 +7,8 @@ import { SourceRefs } from "@/components/site/SourceRefs";
 export const Route = createFileRoute("/british")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "article" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "British Kodagu, 1834–1947 — Coorg History Archive" },
       {
         name: "description",

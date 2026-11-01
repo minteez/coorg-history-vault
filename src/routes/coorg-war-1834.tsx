@@ -6,6 +6,8 @@ import { SourceRefs } from "@/components/site/SourceRefs";
 export const Route = createFileRoute("/coorg-war-1834")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "article" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "The Coorg War of 1834 & the 1837 Rebellion — Coorg History Archive" },
       {
         name: "description",

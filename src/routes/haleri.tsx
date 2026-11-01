@@ -9,6 +9,8 @@ import { EvidenceBadge } from "@/components/site/EvidenceBadge";
 export const Route = createFileRoute("/haleri")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "article" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "The Haleri Dynasty & Kingdom of Coorg — Coorg History Archive" },
       {
         name: "description",

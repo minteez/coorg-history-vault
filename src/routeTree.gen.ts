@@ -19,14 +19,18 @@ import { Route as CultureRouteImport } from './routes/culture'
 import { Route as EvidenceRouteImport } from './routes/evidence'
 import { Route as FestivalsRouteImport } from './routes/festivals'
 import { Route as FiguresRouteImport } from './routes/figures'
+import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as GlossaryRouteImport } from './routes/glossary'
 import { Route as HaleriRouteImport } from './routes/haleri'
 import { Route as IndependenceRouteImport } from './routes/independence'
 import { Route as LanguageRouteImport } from './routes/language'
+import { Route as LiteratureRouteImport } from './routes/literature'
 import { Route as MapRouteImport } from './routes/map'
+import { Route as MilitaryRouteImport } from './routes/military'
 import { Route as MysoreConflictsRouteImport } from './routes/mysore-conflicts'
 import { Route as PattolePalameRouteImport } from './routes/pattole-palame'
 import { Route as PeopleRouteImport } from './routes/people'
+import { Route as PlacesRouteImport } from './routes/places'
 import { Route as SourcesRouteImport } from './routes/sources'
 import { Route as TimelineRouteImport } from './routes/timeline'
 
@@ -80,6 +84,11 @@ const FiguresRoute = FiguresRouteImport.update({
   path: '/figures',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const GlossaryRoute = GlossaryRouteImport.update({
   id: '/glossary',
   path: '/glossary',
@@ -100,9 +109,19 @@ const LanguageRoute = LanguageRouteImport.update({
   path: '/language',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LiteratureRoute = LiteratureRouteImport.update({
+  id: '/literature',
+  path: '/literature',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MapRoute = MapRouteImport.update({
   id: '/map',
   path: '/map',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MilitaryRoute = MilitaryRouteImport.update({
+  id: '/military',
+  path: '/military',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MysoreConflictsRoute = MysoreConflictsRouteImport.update({
@@ -118,6 +137,11 @@ const PattolePalameRoute = PattolePalameRouteImport.update({
 const PeopleRoute = PeopleRouteImport.update({
   id: '/people',
   path: '/people',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlacesRoute = PlacesRouteImport.update({
+  id: '/places',
+  path: '/places',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SourcesRoute = SourcesRouteImport.update({
@@ -142,14 +166,18 @@ export interface FileRoutesByFullPath {
   '/evidence': typeof EvidenceRoute
   '/festivals': typeof FestivalsRoute
   '/figures': typeof FiguresRoute
+  '/gallery': typeof GalleryRoute
   '/glossary': typeof GlossaryRoute
   '/haleri': typeof HaleriRoute
   '/independence': typeof IndependenceRoute
   '/language': typeof LanguageRoute
+  '/literature': typeof LiteratureRoute
   '/map': typeof MapRoute
+  '/military': typeof MilitaryRoute
   '/mysore-conflicts': typeof MysoreConflictsRoute
   '/pattole-palame': typeof PattolePalameRoute
   '/people': typeof PeopleRoute
+  '/places': typeof PlacesRoute
   '/sources': typeof SourcesRoute
   '/timeline': typeof TimelineRoute
 }
@@ -164,14 +192,18 @@ export interface FileRoutesByTo {
   '/evidence': typeof EvidenceRoute
   '/festivals': typeof FestivalsRoute
   '/figures': typeof FiguresRoute
+  '/gallery': typeof GalleryRoute
   '/glossary': typeof GlossaryRoute
   '/haleri': typeof HaleriRoute
   '/independence': typeof IndependenceRoute
   '/language': typeof LanguageRoute
+  '/literature': typeof LiteratureRoute
   '/map': typeof MapRoute
+  '/military': typeof MilitaryRoute
   '/mysore-conflicts': typeof MysoreConflictsRoute
   '/pattole-palame': typeof PattolePalameRoute
   '/people': typeof PeopleRoute
+  '/places': typeof PlacesRoute
   '/sources': typeof SourcesRoute
   '/timeline': typeof TimelineRoute
 }
@@ -187,14 +219,18 @@ export interface FileRoutesById {
   '/evidence': typeof EvidenceRoute
   '/festivals': typeof FestivalsRoute
   '/figures': typeof FiguresRoute
+  '/gallery': typeof GalleryRoute
   '/glossary': typeof GlossaryRoute
   '/haleri': typeof HaleriRoute
   '/independence': typeof IndependenceRoute
   '/language': typeof LanguageRoute
+  '/literature': typeof LiteratureRoute
   '/map': typeof MapRoute
+  '/military': typeof MilitaryRoute
   '/mysore-conflicts': typeof MysoreConflictsRoute
   '/pattole-palame': typeof PattolePalameRoute
   '/people': typeof PeopleRoute
+  '/places': typeof PlacesRoute
   '/sources': typeof SourcesRoute
   '/timeline': typeof TimelineRoute
 }
@@ -211,14 +247,18 @@ export interface FileRouteTypes {
     | '/evidence'
     | '/festivals'
     | '/figures'
+    | '/gallery'
     | '/glossary'
     | '/haleri'
     | '/independence'
     | '/language'
+    | '/literature'
     | '/map'
+    | '/military'
     | '/mysore-conflicts'
     | '/pattole-palame'
     | '/people'
+    | '/places'
     | '/sources'
     | '/timeline'
   fileRoutesByTo: FileRoutesByTo
@@ -233,14 +273,18 @@ export interface FileRouteTypes {
     | '/evidence'
     | '/festivals'
     | '/figures'
+    | '/gallery'
     | '/glossary'
     | '/haleri'
     | '/independence'
     | '/language'
+    | '/literature'
     | '/map'
+    | '/military'
     | '/mysore-conflicts'
     | '/pattole-palame'
     | '/people'
+    | '/places'
     | '/sources'
     | '/timeline'
   id:
@@ -255,14 +299,18 @@ export interface FileRouteTypes {
     | '/evidence'
     | '/festivals'
     | '/figures'
+    | '/gallery'
     | '/glossary'
     | '/haleri'
     | '/independence'
     | '/language'
+    | '/literature'
     | '/map'
+    | '/military'
     | '/mysore-conflicts'
     | '/pattole-palame'
     | '/people'
+    | '/places'
     | '/sources'
     | '/timeline'
   fileRoutesById: FileRoutesById
@@ -278,14 +326,18 @@ export interface RootRouteChildren {
   EvidenceRoute: typeof EvidenceRoute
   FestivalsRoute: typeof FestivalsRoute
   FiguresRoute: typeof FiguresRoute
+  GalleryRoute: typeof GalleryRoute
   GlossaryRoute: typeof GlossaryRoute
   HaleriRoute: typeof HaleriRoute
   IndependenceRoute: typeof IndependenceRoute
   LanguageRoute: typeof LanguageRoute
+  LiteratureRoute: typeof LiteratureRoute
   MapRoute: typeof MapRoute
+  MilitaryRoute: typeof MilitaryRoute
   MysoreConflictsRoute: typeof MysoreConflictsRoute
   PattolePalameRoute: typeof PattolePalameRoute
   PeopleRoute: typeof PeopleRoute
+  PlacesRoute: typeof PlacesRoute
   SourcesRoute: typeof SourcesRoute
   TimelineRoute: typeof TimelineRoute
 }
@@ -362,6 +414,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FiguresRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/glossary': {
       id: '/glossary'
       path: '/glossary'
@@ -390,11 +449,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LanguageRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/literature': {
+      id: '/literature'
+      path: '/literature'
+      fullPath: '/literature'
+      preLoaderRoute: typeof LiteratureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/map': {
       id: '/map'
       path: '/map'
       fullPath: '/map'
       preLoaderRoute: typeof MapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/military': {
+      id: '/military'
+      path: '/military'
+      fullPath: '/military'
+      preLoaderRoute: typeof MilitaryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mysore-conflicts': {
@@ -416,6 +489,13 @@ declare module '@tanstack/react-router' {
       path: '/people'
       fullPath: '/people'
       preLoaderRoute: typeof PeopleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/places': {
+      id: '/places'
+      path: '/places'
+      fullPath: '/places'
+      preLoaderRoute: typeof PlacesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sources': {
@@ -446,14 +526,18 @@ const rootRouteChildren: RootRouteChildren = {
   EvidenceRoute: EvidenceRoute,
   FestivalsRoute: FestivalsRoute,
   FiguresRoute: FiguresRoute,
+  GalleryRoute: GalleryRoute,
   GlossaryRoute: GlossaryRoute,
   HaleriRoute: HaleriRoute,
   IndependenceRoute: IndependenceRoute,
   LanguageRoute: LanguageRoute,
+  LiteratureRoute: LiteratureRoute,
   MapRoute: MapRoute,
+  MilitaryRoute: MilitaryRoute,
   MysoreConflictsRoute: MysoreConflictsRoute,
   PattolePalameRoute: PattolePalameRoute,
   PeopleRoute: PeopleRoute,
+  PlacesRoute: PlacesRoute,
   SourcesRoute: SourcesRoute,
   TimelineRoute: TimelineRoute,
 }

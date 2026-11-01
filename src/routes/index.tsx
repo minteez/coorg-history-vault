@@ -11,6 +11,8 @@ import { sources } from "@/data/sources";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "The Complete History of Coorg — A Cited Archive of Kodagu" },
       {
         name: "description",

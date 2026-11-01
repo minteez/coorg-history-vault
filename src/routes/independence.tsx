@@ -8,6 +8,8 @@ import { figures } from "@/data/figures";
 export const Route = createFileRoute("/independence")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "article" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "Independence & Coorg State, 1947–1956 — Coorg History Archive" },
       {
         name: "description",

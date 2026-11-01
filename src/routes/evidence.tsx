@@ -5,6 +5,8 @@ import { EvidenceKey } from "@/components/site/EvidenceBadge";
 export const Route = createFileRoute("/evidence")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "article" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "Myth, Tradition or History? — Coorg Archive Method" },
       {
         name: "description",

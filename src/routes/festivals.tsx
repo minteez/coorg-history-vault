@@ -6,6 +6,8 @@ import { EvidenceBadge } from "@/components/site/EvidenceBadge";
 export const Route = createFileRoute("/festivals")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "article" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "Festivals of Kodagu — Coorg History Archive" },
       {
         name: "description",

@@ -4,6 +4,8 @@ import { sources } from "@/data/sources";
 export const Route = createFileRoute("/sources")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "Sources & Bibliography — The Complete History of Coorg" },
       {
         name: "description",

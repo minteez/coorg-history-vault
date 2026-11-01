@@ -5,6 +5,8 @@ import { PageHeader, InfoPanel, Section } from "@/components/site/Prose";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "About the Project & the Developer — Coorg History Archive" },
       {
         name: "description",

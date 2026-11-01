@@ -8,6 +8,8 @@ import { EraEvents } from "@/components/site/EraEvents";
 export const Route = createFileRoute("/agriculture")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "article" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "Agriculture in Kodagu — Coorg History Archive" },
       {
         name: "description",

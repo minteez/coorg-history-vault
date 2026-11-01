@@ -5,10 +5,14 @@ import { SourceRefs } from "@/components/site/SourceRefs";
 import { EvidenceBadge } from "@/components/site/EvidenceBadge";
 import { figures, figureFieldLabels, type FigureField } from "@/data/figures";
 import { cn } from "@/lib/utils";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/figures")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "Historical Figures of Kodagu — Coorg History Archive" },
       {
         name: "description",
@@ -30,9 +34,10 @@ const fields = Object.keys(figureFieldLabels) as FigureField[];
 
 function FiguresPage() {
   const [field, setField] = useState<"all" | FigureField>("all");
+  const [query, setQuery] = useState("");
   const shown = useMemo(
-    () => (field === "all" ? figures : figures.filter((f) => f.field === field)),
-    [field],
+    () => figures.filter((f) => (field === "all" || f.field === field) && `${f.name} ${f.native ?? ""} ${f.role} ${f.bio}`.toLowerCase().includes(query.toLowerCase().trim())),
+    [field, query],
   );
 
   return (
@@ -44,9 +49,11 @@ function FiguresPage() {
       />
 
       <Section eyebrow="Browse" title={`${shown.length} people`}>
+        <label htmlFor="figure-search" className="mb-2 block text-sm font-medium">Search historical figures</label>
+        <Input id="figure-search" type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Name or subject" className="mb-5 max-w-md" />
         <div className="mb-8 flex flex-wrap gap-2">
           {(["all", ...fields] as const).map((f) => (
-            <button
+            <Button
               key={f}
               type="button"
               onClick={() => setField(f)}
@@ -59,10 +66,11 @@ function FiguresPage() {
               )}
             >
               {f === "all" ? "All" : figureFieldLabels[f]}
-            </button>
+            </Button>
           ))}
         </div>
 
+        {!shown.length && <p className="py-8 text-muted-foreground" role="status">No people match these filters.</p>}
         <ul className="grid gap-5 md:grid-cols-2">
           {shown.map((f) => (
             <li key={f.id} id={f.id} className="archive-card scroll-mt-24 p-6">

@@ -11,6 +11,8 @@ import {
 import { allNavItems } from "@/data/nav";
 import { timelineSorted } from "@/data/timeline";
 import { sources } from "@/data/sources";
+import { figures } from "@/data/figures";
+import { places } from "@/data/places";
 
 export function SearchDialog({
   open,
@@ -24,16 +26,16 @@ export function SearchDialog({
 
   const events = useMemo(() => timelineSorted.slice(0, 200), []);
 
-  const go = (to: string) => {
+  const go = (to: string, hash?: string) => {
     onOpenChange(false);
     setQuery("");
-    void navigate({ to });
+    void navigate({ to, ...(hash ? { hash } : {}) });
   };
 
   return (
     <CommandDialog open={open} onOpenChange={onOpenChange}>
       <CommandInput
-        placeholder="Search pages, events and sources…"
+        placeholder="Search pages, people, places and sources…"
         value={query}
         onValueChange={setQuery}
       />
@@ -43,7 +45,7 @@ export function SearchDialog({
         <CommandGroup heading="Pages">
           {allNavItems.map((item) => (
             <CommandItem
-              key={item.to}
+              key={item.label}
               value={`${item.label} ${item.blurb ?? ""}`}
               onSelect={() => go(item.to)}
             >
@@ -68,6 +70,12 @@ export function SearchDialog({
           ))}
         </CommandGroup>
 
+        <CommandGroup heading="People">
+          {figures.map((figure) => <CommandItem key={figure.id} value={`${figure.name} ${figure.role}`} onSelect={() => go("/figures", figure.id)}>{figure.name}</CommandItem>)}
+        </CommandGroup>
+        <CommandGroup heading="Places">
+          {places.map((place) => <CommandItem key={place.id} value={`${place.name} ${place.summary}`} onSelect={() => go("/places", place.id)}>{place.name}</CommandItem>)}
+        </CommandGroup>
         <CommandGroup heading="Sources">
           {sources.map((source) => (
             <CommandItem

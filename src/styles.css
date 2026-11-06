@@ -281,3 +281,8 @@
   color: var(--color-card-foreground);
   border-color: var(--color-border);
 }
+
+/* Hide Lovable watermark badge */
+#lovable-badge {
+  display: none !important;
+}
